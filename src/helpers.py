@@ -108,12 +108,7 @@ def get_lending_df(with_plots = True):
     plot(
       path=path.plots('dataframe/corr-installment-loan-amnt.png'),
       lamb=lambda: sns.scatterplot(x='installment', y='loan_amnt', data=df)
-    )
-
-    plot(
-      path=path.plots('dataframe/corr-loan-status-loan-amnt.png'),
-      lamb=lambda: sns.boxplot(x='loan_status', y='loan_amnt', data=df)
-    )
+    ) 
 
     plot(
       size=(12,4),

@@ -62,10 +62,6 @@ Historic of loans by loan amount:
 
 <img src="storage/plots/dataframe/h-loan-amnt.png" width="500px"/>
 
-Relationship between loan status and loan amount:
-
-<img src="storage/plots/dataframe/r-loan-status-loan-amnt.png" width="500px"/>
-
 ## Running
 
 To run the model first create a new Python environment and activate it. I'm using [Anaconda](https://www.anaconda.com/) for that. The command bellow will automatically setup the environment with conda and pipenv:
