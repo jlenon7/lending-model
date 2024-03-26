@@ -1,10 +1,12 @@
+import time
+import calendar
 import numpy as np
 import seaborn as sns
 
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.model_selection import train_test_split
-from tensorflow.keras.callbacks import EarlyStopping
 from helpers import path, plot, load_model, get_lending_df
+from tensorflow.keras.callbacks import EarlyStopping, TensorBoard
 from sklearn.metrics import confusion_matrix, classification_report
 
 df = get_lending_df()
@@ -38,6 +40,15 @@ model.fit(
       mode='min',
       verbose=1,
       patience=5
+    ),
+    TensorBoard(
+      log_dir=path.logs(f'fit-{calendar.timegm(time.gmtime())}'),
+      histogram_freq=1,
+      write_graph=True,
+      write_images=True,
+      update_freq='epoch',
+      profile_batch=2,
+      embeddings_freq=1
     )
   ]
 )

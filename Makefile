@@ -32,6 +32,10 @@ install-dev:
 model:
 	pipenv run python src/main.py
 
+# Run tensorboard
+board:
+	tensorboard --logdir storage/logs/fit-1711494431 
+
 # Run the model and predict a random value from our dataset.
 predict:
 	pipenv run python src/predict.py

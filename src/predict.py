@@ -31,5 +31,5 @@ prediction = model.predict(scaled_customer)
 prediction = np.where(prediction > 0.5, 1, 0)
 
 print()
-print('Exam result:          ', customer['loan_repaid'].iloc[0])
-print('Exam predicted result:', prediction[0][0])
+print('Customer eligible result:          ', customer['loan_repaid'].iloc[0])
+print('Customer eligible predicted result:', prediction[0][0])

@@ -10,9 +10,10 @@ from tensorflow.keras.layers import Dense, Dropout
 
 class Path:
   def plots(self, path: Optional[str]):
-    path = self.clean_path(path)
+    return self.storage(f'plots/{path}')
 
-    return f'storage/plots/{path}'
+  def logs(self, path: Optional[str]):    
+    return self.storage(f'logs/{path}')
 
   def storage(self, path: Optional[str]):    
     path = self.clean_path(path) 
