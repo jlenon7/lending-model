@@ -82,6 +82,10 @@ And run the model:
 make model
 ```
 
+> [!WARNING]
+> Dont run `make model` without deleting `storage/lending-model.keras`, this will
+> cause train/test data over fitting.
+
 After running you model, it will be saved inside `storage/lending-model.keras`.
 To just run your recent created model and predict a random value from our data set,
 use the following script:
@@ -90,4 +94,12 @@ use the following script:
 make predict 
 ```
 
-Remember that for this to work, you need to run `make model` first to create your model.
+> [!WARNING]
+> In case you have deleted the `storage/lending-model.keras`, remember that to get `make predict` working you need to run `make model` first to create it.
+
+To run TensorBoard with the latest created version of the model within this
+repository run:
+
+```shell
+make board
+```
