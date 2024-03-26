@@ -128,6 +128,7 @@ def get_lending_df(with_plots = True):
     )
 
     plot(
+      size=(12,4),
       path=path.plots('dataframe/corr-loan-repaid.png'),
       lamb=lambda: sns.barplot(df.corr(numeric_only=True)['loan_repaid'].sort_values().drop('loan_repaid'))
     )

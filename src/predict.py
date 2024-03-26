@@ -1,5 +1,4 @@
 import numpy as np
-import seaborn as sns
 
 from helpers import load_model, get_lending_df
 from sklearn.preprocessing import MinMaxScaler
